@@ -19,7 +19,7 @@ Please change the parent <Route path="${Q}"> to <Route path="${Q==="/"?"*":`${Q}
       hover:shadow-lg hover:shadow-emerald-500/40\r
       transition-all duration-300\r
       cursor-pointer\r
-    `,children:"Reservar"}),x.jsxs("button",{onClick:()=>window.location.href="/admin",className:`\r
+    `,children:"Reservar"}),x.jsxs("button",{onClick:()=>l("/admin"),className:`\r
       flex items-center gap-1\r
       px-4 py-2\r
       rounded-lg\r
