@@ -117,7 +117,7 @@ export default function Navbar({ adminUser }) {
 
   {/* BOTÓN ADMIN */}
   <button
-    onClick={() => (window.location.href = "/admin")}
+    onClick={() => (window.location.href = import.meta.env.BASE_URL + "admin.html")}
     className="
       flex items-center gap-1
       px-4 py-2

@@ -237,18 +237,22 @@ Volver al sitio
 
 // ✅ SECCION CAROUSEL
 function App() {
-  useEffect(() => {
-    images.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, []);
+// ✅ PRIMERO las imágenes
+const images = [
+  `${import.meta.env.BASE_URL}images/fondo1.webp`,
+  `${import.meta.env.BASE_URL}images/fondo2.webp`,
+  `${import.meta.env.BASE_URL}images/fondo3.webp`,
+];
+
+// ✅ DESPUÉS el preload
+useEffect(() => {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}, [images]);
+
   
-  const images = [
-    "/images/fondo1.webp",
-    "/images/fondo2.webp",
-    "/images/fondo3.webp"
-  ];
   const [current, setCurrent] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [closing, setClosing] = useState(false);
@@ -687,8 +691,13 @@ if (isAdminRoute) {
 <section id="menu"></section>
 
 <section className="relative text-center">
-  <div className="bg-[url('/images/fondo4.webp')] bg-cover bg-center bg-fixed h-screen flex flex-col items-center justify-center">
-    
+<div
+  className="bg-cover bg-center bg-fixed h-screen"
+  style={{
+    backgroundImage: `url(${import.meta.env.BASE_URL}images/fondo4.webp)`
+  }}
+>
+
     {/* Capa semitransparente */}
     <div className="absolute inset-0 bg-black/40"></div>
 
@@ -1143,7 +1152,7 @@ className={`w-full py-3 rounded-lg transition cursor-pointer
 
 <div class="w-full md:w-1/2">
   <img
-    src="/images/SobreNosotros.webp"
+    src={`${import.meta.env.BASE_URL}images/SobreNosotros.webp`}
     alt="Restaurante elegante"
     className="
       w-full 

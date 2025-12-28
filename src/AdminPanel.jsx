@@ -113,7 +113,7 @@ export default function AdminPanel({ adminUser }) {
       </h1>
       <div className="flex gap-2">
       <button
-  onClick={() => (window.location.href = "/")}
+  onClick={() => (window.location.href = import.meta.env.BASE_URL)}
   className="
     flex items-center gap-2
     px-4 py-2
