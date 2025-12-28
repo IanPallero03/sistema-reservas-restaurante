@@ -1,4 +1,4 @@
-import{j as e,r as n,b as p,m,i as g,A as f,R as b,n as j}from"./AdminPanel-CIQgiSMq.js";function y({email:t,setEmail:l,password:o,setPassword:i,loginAdmin:s,authError:a}){return e.jsx("div",{className:"min-h-screen flex items-center justify-center bg-[#f5e6ca] px-4",children:e.jsxs("form",{onSubmit:s,className:`\r
+import{j as e,r as n,b as p,m as u,i as g,A as f,R as b,n as j}from"./AdminPanel-CIQgiSMq.js";function y({email:t,setEmail:l,password:o,setPassword:i,onSubmit:s,error:a}){return e.jsx("div",{className:"min-h-screen flex items-center justify-center bg-[#f5e6ca] px-4",children:e.jsxs("form",{onSubmit:s,className:`\r
             w-full max-w-sm\r
             bg-white\r
             p-8\r
@@ -45,4 +45,4 @@ import{j as e,r as n,b as p,m,i as g,A as f,R as b,n as j}from"./AdminPanel-CIQg
               transition-all\r
               duration-300\r
               cursor-pointer\r
-            `,children:"← Volver al sitio"}),e.jsx("p",{className:"text-xs text-gray-400 text-center pt-2",children:"Sistema interno · Mi Restaurante"})]})})}function w(){const[t,l]=n.useState(null),[o,i]=n.useState(!0),[s,a]=n.useState(""),[r,u]=n.useState(""),[x,c]=n.useState("");return n.useEffect(()=>{const d=p(m,h=>{l(h),i(!1)});return()=>d()},[]),o?e.jsx("p",{style:{padding:40},children:"Cargando admin..."}):t?e.jsx(f,{adminUser:t}):e.jsx(y,{email:s,setEmail:a,password:r,setPassword:u,error:x,onSubmit:async d=>{d.preventDefault(),c("");try{await g(m,s,r)}catch{c("Email o contraseña incorrectos")}}})}b.createRoot(document.getElementById("root")).render(e.jsx(j.StrictMode,{children:e.jsx(w,{})}));
+            `,children:"← Volver al sitio"}),e.jsx("p",{className:"text-xs text-gray-400 text-center pt-2",children:"Sistema interno · Mi Restaurante"})]})})}function w(){const[t,l]=n.useState(null),[o,i]=n.useState(!0),[s,a]=n.useState(""),[r,m]=n.useState(""),[x,c]=n.useState("");return n.useEffect(()=>{const d=p(u,h=>{l(h),i(!1)});return()=>d()},[]),o?e.jsx("p",{style:{padding:40},children:"Cargando admin..."}):t?e.jsx(f,{adminUser:t}):e.jsx(y,{email:s,setEmail:a,password:r,setPassword:m,error:x,onSubmit:async d=>{d.preventDefault(),c("");try{await g(u,s,r)}catch{c("Email o contraseña incorrectos")}}})}b.createRoot(document.getElementById("root")).render(e.jsx(j.StrictMode,{children:e.jsx(w,{})}));
