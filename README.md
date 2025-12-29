@@ -1,16 +1,95 @@
-# React + Vite
+# 🍽️ Sistema de Reservas para Restaurante
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con **React + Vite** que permite a los clientes realizar reservas online y al administrador gestionar las reservas desde un **panel de administración privado**.
 
-Currently, two official plugins are available:
+👉 **Demo en vivo:**  
+https://ianpallero03.github.io/sistema-reservas-restaurante/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⚛️ **React**
+- ⚡ **Vite**
+- 🎨 **Tailwind CSS**
+- 🔥 **Firebase**
+  - Firestore (base de datos)
+  - Firebase Authentication (login de administrador)
+- 🎞️ **Framer Motion**
+- 🌐 **GitHub Pages** (deploy)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Funcionalidades principales
+
+### 🧑‍🍳 Usuario
+- Realizar reservas indicando:
+  - Nombre
+  - Teléfono
+  - Fecha
+  - Horario
+  - Cantidad de personas
+- Validaciones en tiempo real:
+  - Solo se permiten reservas para la **semana actual**
+  - Control de **capacidad máxima por día**
+  - Mensajes claros cuando no hay disponibilidad
+- Interfaz responsive (adaptada a mobile y desktop)
+- Diseño moderno y animaciones suaves
+
+---
+
+### 🔐 Panel de Administrador
+- Acceso protegido mediante **Firebase Authentication**
+- Login exclusivo para administradores
+- Visualización y gestión de reservas
+- Separación completa entre:
+  - Sitio público
+  - Panel admin (`admin.html`)
+
+---
+
+## 🛠️ Lógica destacada
+
+- Control de cupos diarios
+- Bloqueo automático de reservas cuando se alcanza la capacidad máxima
+- Validación de fechas dentro de la semana actual
+- Manejo de errores y mensajes al usuario
+- Estructura pensada para escalar el proyecto
+
+---
+
+## 📁 Estructura general del proyecto
+
+src/
+├── components/
+├── admin/
+│ ├── AdminApp.jsx
+│ ├── AdminLogin.jsx
+│ └── AdminPanel.jsx
+├── firebase/
+│ └── config.jsx
+├── App.jsx
+├── main.jsx
+public/
+├── images/
+├── admin.html
+
+
+---
+
+## 📌 Estado del proyecto
+
+Este proyecto se encuentra **en constante evolución**.  
+La idea es seguir mejorándolo con nuevas funcionalidades, optimizaciones y mejores prácticas a medida que continúe aprendiendo y creciendo como desarrollador frontend.
+
+---
+
+## 👨‍💻 Autor
+
+**Ian Pallero**  
+Desarrollador Frontend Junior  
+📎 LinkedIn | GitHub
+
+---
+
+⭐ Si te gustó el proyecto, ¡no dudes en dejar una estrella!
